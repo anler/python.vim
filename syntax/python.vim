@@ -39,7 +39,7 @@ call pymode#Default('g:pymode_syntax_all', 1)
     syn keyword pythonStatement class nextgroup=pythonClass skipwhite
     syn match pythonClass "\%(\%(def\s\|class\s\|@\)\s*\)\@<=\h\%(\w\|\.\)*" contained nextgroup=pythonClassVars
     syn region pythonClassVars start="(" end=")" contained contains=pythonClassParameters transparent keepend
-    syn match pythonClassParameters "[^,\*]*" contained contains=pythonBuiltin,pythonBuiltinObj,pythonStatement,pythonBrackets skipwhite
+    syn match pythonClassParameters "[^,\*]*" contained contains=pythonBuiltin,pythonString,pythonBuiltinObj,pythonStatement,pythonBrackets skipwhite
 
     syn keyword pythonRepeat        for while
     syn keyword pythonConditional   if elif else
